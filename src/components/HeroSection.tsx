@@ -62,7 +62,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, letterSpacing: "1.5em" }}
           animate={{ opacity: 1, letterSpacing: "0.4em" }}
           transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-          className="font-lato text-[10px] text-[#4aada0] tracking-[0.4em] uppercase mb-8"
+          style={{ fontFamily: "sans-serif", fontSize: 10, color: "#4aada0", letterSpacing: "0.4em", textTransform: "uppercase", marginBottom: "2rem", display: "block", minHeight: 16 }}
         >
           Sousou no Frieren &nbsp;·&nbsp; 葬送のフリーレン
         </motion.div>

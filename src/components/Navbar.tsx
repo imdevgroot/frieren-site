@@ -37,7 +37,7 @@ export default function Navbar() {
           <span className="shimmer-text" style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 900, fontSize: 15, letterSpacing: "0.35em", lineHeight: 1 }}>
             FRIEREN
           </span>
-          <span style={{ fontFamily: "var(--font-lato, sans-serif)", fontSize: 8, letterSpacing: "0.3em", color: "rgba(74,173,160,0.6)", lineHeight: 1 }}>
+          <span style={{ fontFamily: "sans-serif", fontSize: 8, letterSpacing: "0.3em", color: "rgba(74,173,160,0.6)", lineHeight: "1", display: "block", height: 10 }}>
             葬送のフリーレン
           </span>
         </a>
@@ -61,7 +61,7 @@ export default function Navbar() {
         className="mobile-nav">
         <a href="#" style={{ display: "flex", flexDirection: "column", gap: 3, textDecoration: "none", minHeight: 28 }}>
           <span className="shimmer-text" style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 900, fontSize: 13, letterSpacing: "0.3em", lineHeight: 1 }}>FRIEREN</span>
-          <span style={{ fontFamily: "var(--font-lato, sans-serif)", fontSize: 7, letterSpacing: "0.25em", color: "rgba(74,173,160,0.6)", lineHeight: 1 }}>葬送のフリーレン</span>
+          <span style={{ fontFamily: "sans-serif", fontSize: 7, letterSpacing: "0.25em", color: "rgba(74,173,160,0.6)", lineHeight: "1", display: "block", height: 9 }}>葬送のフリーレン</span>
         </a>
         <button onClick={() => setOpen(!open)}
           style={{ fontSize: 24, background: "none", border: "none", color: "#1e2030", cursor: "pointer", lineHeight: 1 }}>
