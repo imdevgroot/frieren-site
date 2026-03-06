@@ -59,9 +59,9 @@ export default function HeroSection() {
       {/* Content — no parallax transform on mobile */}
       <motion.div style={{ y, opacity: opac }} className="relative z-10 text-center px-6 max-w-4xl mx-auto w-full">
         <motion.div
-          initial={{ opacity: 0, letterSpacing: "1.5em" }}
-          animate={{ opacity: 1, letterSpacing: "0.4em" }}
-          transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+          initial={{ opacity: 0, ...(isMobile ? {} : { letterSpacing: "1.5em" }) }}
+          animate={{ opacity: 1, ...(isMobile ? {} : { letterSpacing: "0.4em" }) }}
+          transition={{ duration: isMobile ? 0.8 : 1.5, delay: 0.3, ease: "easeOut" }}
           style={{ fontFamily: "sans-serif", fontSize: 10, color: "#4aada0", letterSpacing: "0.4em", textTransform: "uppercase", marginBottom: "2rem", display: "block", minHeight: 16 }}
         >
           Sousou no Frieren &nbsp;·&nbsp; 葬送のフリーレン
