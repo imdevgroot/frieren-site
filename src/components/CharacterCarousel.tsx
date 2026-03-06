@@ -195,27 +195,32 @@ export default function CharacterCarousel() {
             transition: "opacity 0.38s cubic-bezier(0.4, 0, 0.2, 1)",
           }} className="carousel-grid">
 
-            {/* Image — fixed 300×440 frame so all characters are same size */}
+            {/* Image stack — ALL images preloaded in DOM, only active fades in/out */}
             <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end", position: "relative" }}>
+              {/* Glow — transitions with accent color */}
               <div style={{
                 position: "absolute", bottom: 0, left: "50%", transform: "translateX(-50%)",
                 width: 280, height: 320,
                 background: `radial-gradient(ellipse, ${char.accentColor}1a 0%, transparent 70%)`,
-                pointerEvents: "none",
+                pointerEvents: "none", transition: "background 0.5s ease",
               }} />
-              <div style={{
-                position: "relative", zIndex: 1,
-                width: 300, height: 440,
-                display: "flex", alignItems: "flex-end", justifyContent: "center",
-                filter: `drop-shadow(0 16px 48px ${char.accentColor}2a)`,
-              }}>
-                <Image
-                  src={char.image} alt={char.name}
-                  fill
-                  sizes="300px"
-                  priority
-                  style={{ objectFit: "contain", objectPosition: "bottom center" }}
-                />
+              {/* Fixed frame containing all images stacked */}
+              <div style={{ position: "relative", zIndex: 1, width: 300, height: 440 }}>
+                {CHARACTERS.map((c, i) => (
+                  <div key={c.name} style={{
+                    position: "absolute", inset: 0,
+                    opacity: i === active && !transitioning ? 1 : 0,
+                    transition: "opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+                    filter: `drop-shadow(0 16px 48px ${c.accentColor}2a)`,
+                  }}>
+                    <Image
+                      src={c.image} alt={c.name}
+                      fill sizes="300px"
+                      priority={i < 3}
+                      style={{ objectFit: "contain", objectPosition: "bottom center" }}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
 

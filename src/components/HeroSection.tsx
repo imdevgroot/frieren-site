@@ -68,11 +68,11 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1.4, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, ...(isMobile ? {} : { y: 40, filter: "blur(12px)" }) }}
+          animate={{ opacity: 1, ...(isMobile ? {} : { y: 0, filter: "blur(0px)" }) }}
+          transition={{ duration: isMobile ? 0.8 : 1.4, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="font-cinzel font-black shimmer-text leading-none mb-6"
-          style={{ fontSize: "clamp(4rem, 13vw, 9rem)" }}
+          style={{ fontSize: "clamp(4rem, 13vw, 9rem)", letterSpacing: "0.35em" }}
         >
           FRIEREN
         </motion.h1>
