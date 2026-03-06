@@ -71,8 +71,14 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.4, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="font-cinzel font-black shimmer-text leading-none mb-6"
-          style={{ fontSize: "clamp(4rem, 13vw, 9rem)" }}
+          className="shimmer-text"
+          style={{
+            fontFamily: "var(--font-cinzel, serif)",
+            fontWeight: 900,
+            fontSize: "clamp(4rem, 13vw, 9rem)",
+            lineHeight: 1,
+            marginBottom: "1.5rem",
+          }}
         >
           FRIEREN
         </motion.h1>
