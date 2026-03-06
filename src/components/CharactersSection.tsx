@@ -18,6 +18,16 @@ const ACCENT_COLORS: Record<string, string> = {
   Heiter: "#35877b", Eisen: "#7a6055", Sein: "#6a8a70", Denken: "#6070a0", Ubel: "#a06080",
 };
 
+// Local images override API for specific characters
+const LOCAL_IMAGES: Record<string, string> = {
+  Frieren: "/frieren-official.webp",
+  Fern:    "/fern-official.webp",
+  Stark:   "/stark-official.webp",
+  Himmel:  "/himmel-official.webp",
+  Heiter:  "/heiter-official.webp",
+  Ubel:    "/ubel-official.webp",
+};
+
 interface CharData { name: string; role: string; quote: string; traits: string[]; image: string; }
 
 function useReveal() {
@@ -97,6 +107,7 @@ export default function CharactersSection() {
         const json = await res.json();
         const api  = json.data as Array<{ character: { mal_id: number; name: string; images: { jpg: { image_url: string } } } }>;
         const result = CHARACTERS.map(c => {
+          if (LOCAL_IMAGES[c.name]) return { ...c, image: LOCAL_IMAGES[c.name] };
           const found = api.find(d =>
             d.character.mal_id === c.malId ||
             d.character.name.toLowerCase().includes(c.name.toLowerCase())

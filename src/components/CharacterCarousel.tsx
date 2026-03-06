@@ -89,13 +89,20 @@ export default function CharacterCarousel() {
 
   const resetAuto = useCallback(() => {
     if (autoTimer.current) clearInterval(autoTimer.current);
+    // Don't auto-advance while modal is open
+    if (modalChar) return;
     autoTimer.current = setInterval(() => go(active + 1), 7000);
-  }, [active, go]);
+  }, [active, go, modalChar]);
 
   useEffect(() => {
+    // Pause auto-advance while modal is open
+    if (modalChar) {
+      if (autoTimer.current) clearInterval(autoTimer.current);
+      return;
+    }
     autoTimer.current = setInterval(() => go(active + 1), 7000);
     return () => { if (autoTimer.current) clearInterval(autoTimer.current); };
-  }, [active, go]);
+  }, [active, go, modalChar]);
 
   const handleGo = useCallback((n: number) => {
     resetAuto();
