@@ -95,7 +95,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.8 }}
-          className="mt-28 flex flex-col sm:flex-row gap-5 justify-center items-center"
+          className="mt-36 flex flex-col sm:flex-row gap-5 justify-center items-center"
         >
           <a href="#frieren" style={{
               fontFamily: "var(--font-lato, sans-serif)",

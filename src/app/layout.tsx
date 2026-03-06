@@ -40,12 +40,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${cinzel.variable} ${lato.variable}`}>
       <body>
         {children}
-        {/* Smooth scroll without hash persisting in URL on refresh */}
+        {/* Fix scroll: no hash in URL, always top on fresh load */}
         <script dangerouslySetInnerHTML={{ __html: `
+          if (history.scrollRestoration) history.scrollRestoration = 'manual';
+          window.addEventListener('load', function() { window.scrollTo(0, 0); });
           document.addEventListener('click', function(e) {
-            var el = e.target.closest('a[href^="#"]');
+            var el = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
             if (!el) return;
             var id = el.getAttribute('href').slice(1);
+            if (!id) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
             var target = document.getElementById(id);
             if (!target) return;
             e.preventDefault();

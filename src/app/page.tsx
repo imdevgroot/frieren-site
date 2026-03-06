@@ -3,6 +3,7 @@ import Cursor from "@/components/Cursor";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FrierenSpotlight from "@/components/FrierenSpotlight";
+import CharacterCarousel from "@/components/CharacterCarousel";
 import CharacterSpotlight from "@/components/CharacterSpotlight";
 import CharactersSection from "@/components/CharactersSection";
 import MagicSection from "@/components/MagicSection";
@@ -89,6 +90,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <FrierenSpotlight />
+      <CharacterCarousel />
       <CharacterSpotlight {...FERN} />
       <CharacterSpotlight {...STARK} />
       <CharacterSpotlight {...HIMMEL} />
