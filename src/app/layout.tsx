@@ -6,7 +6,8 @@ const cinzel = Cinzel_Decorative({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
   variable: "--font-cinzel",
-  display: "swap",
+  display: "block", // prevents layout shift — text invisible until font ready
+  preload: true,
 });
 
 const lato = Lato({

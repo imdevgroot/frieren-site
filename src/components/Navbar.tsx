@@ -33,7 +33,7 @@ export default function Navbar() {
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px 48px", maxWidth: 1200, margin: "0 auto" }}
         className="desktop-nav">
         {/* Logo */}
-        <a href="#" style={{ display: "flex", flexDirection: "column", gap: 3, textDecoration: "none" }}>
+        <a href="#" style={{ display: "flex", flexDirection: "column", gap: 3, textDecoration: "none", minHeight: 28 }}>
           <span className="shimmer-text" style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 900, fontSize: 15, letterSpacing: "0.35em", lineHeight: 1 }}>
             FRIEREN
           </span>
@@ -59,7 +59,7 @@ export default function Navbar() {
       {/* Mobile */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 24px" }}
         className="mobile-nav">
-        <a href="#" style={{ display: "flex", flexDirection: "column", gap: 3, textDecoration: "none" }}>
+        <a href="#" style={{ display: "flex", flexDirection: "column", gap: 3, textDecoration: "none", minHeight: 28 }}>
           <span className="shimmer-text" style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 900, fontSize: 13, letterSpacing: "0.3em", lineHeight: 1 }}>FRIEREN</span>
           <span style={{ fontFamily: "var(--font-lato, sans-serif)", fontSize: 7, letterSpacing: "0.25em", color: "rgba(74,173,160,0.6)", lineHeight: 1 }}>葬送のフリーレン</span>
         </a>
