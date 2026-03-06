@@ -123,8 +123,10 @@ export default function CharacterModal({ char, onClose }: Props) {
                 {/* CENTER — image */}
                 <div className="spotlight-center" style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center" }}>
                   <div style={{ position: "absolute", bottom: 0, left: "50%", transform: "translateX(-50%)", width: 260, height: 340, background: `radial-gradient(ellipse, ${char.accentColor}22 0%, transparent 70%)`, pointerEvents: "none" }} />
-                  <Image src={char.image} alt={char.name} width={300} height={420} priority
-                    style={{ objectFit: "contain", filter: `drop-shadow(0 16px 48px ${char.accentColor}33)`, position: "relative", zIndex: 1 }} />
+                  <div style={{ position: "relative", width: 280, height: 400, zIndex: 1, filter: `drop-shadow(0 16px 48px ${char.accentColor}33)` }}>
+                    <Image src={char.image} alt={char.name} fill sizes="280px" priority
+                      style={{ objectFit: "contain", objectPosition: "bottom center" }} />
+                  </div>
                 </div>
 
                 {/* RIGHT — bio + traits */}

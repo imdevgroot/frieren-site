@@ -195,7 +195,7 @@ export default function CharacterCarousel() {
             transition: "opacity 0.38s cubic-bezier(0.4, 0, 0.2, 1)",
           }} className="carousel-grid">
 
-            {/* Image */}
+            {/* Image — fixed 300×440 frame so all characters are same size */}
             <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end", position: "relative" }}>
               <div style={{
                 position: "absolute", bottom: 0, left: "50%", transform: "translateX(-50%)",
@@ -203,8 +203,20 @@ export default function CharacterCarousel() {
                 background: `radial-gradient(ellipse, ${char.accentColor}1a 0%, transparent 70%)`,
                 pointerEvents: "none",
               }} />
-              <Image src={char.image} alt={char.name} width={300} height={420} priority
-                style={{ objectFit: "contain", filter: `drop-shadow(0 16px 48px ${char.accentColor}2a)`, position: "relative", zIndex: 1 }} />
+              <div style={{
+                position: "relative", zIndex: 1,
+                width: 300, height: 440,
+                display: "flex", alignItems: "flex-end", justifyContent: "center",
+                filter: `drop-shadow(0 16px 48px ${char.accentColor}2a)`,
+              }}>
+                <Image
+                  src={char.image} alt={char.name}
+                  fill
+                  sizes="300px"
+                  priority
+                  style={{ objectFit: "contain", objectPosition: "bottom center" }}
+                />
+              </div>
             </div>
 
             {/* Info */}
