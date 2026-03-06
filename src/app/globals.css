@@ -26,7 +26,12 @@ body {
   cursor: none;
 }
 
-/* ─── Cursor ─── */
+/* ─── Cursor (desktop/mouse only) ─── */
+@media (pointer: coarse) {
+  .cursor-dot, .cursor-ring { display: none !important; }
+  body { cursor: auto !important; }
+}
+
 .cursor-dot {
   position: fixed; top: 0; left: 0;
   width: 7px; height: 7px; border-radius: 50%;

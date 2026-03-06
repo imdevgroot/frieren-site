@@ -8,6 +8,9 @@ export default function Cursor() {
   const ring = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
+    // No cursor trail on touch devices
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
     const move = (e: MouseEvent) => {
       pos.current = { x: e.clientX, y: e.clientY };
       if (dotRef.current) {

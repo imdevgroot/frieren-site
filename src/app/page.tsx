@@ -91,9 +91,6 @@ export default function Home() {
       <HeroSection />
       <FrierenSpotlight />
       <CharacterCarousel />
-      <CharacterSpotlight {...FERN} />
-      <CharacterSpotlight {...STARK} />
-      <CharacterSpotlight {...HIMMEL} />
       <CharactersSection />
       <MagicSection />
       <ArcsTimeline />
