@@ -25,6 +25,7 @@ const LOCAL_IMAGES: Record<string, string> = {
   Stark:   "/stark-official.webp",
   Himmel:  "/himmel-official.webp",
   Heiter:  "/heiter-official.webp",
+  Eisen:   "/eisen-official.webp",
   Ubel:    "/ubel-official.webp",
 };
 

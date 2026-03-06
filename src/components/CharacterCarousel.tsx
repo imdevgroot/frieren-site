@@ -5,18 +5,13 @@ import CharacterModal from "./CharacterModal";
 
 const CHARACTERS = [
   {
-    name: "Fern",
-    nameJp: "フェルン",
-    role: "Mage Apprentice",
+    name: "Fern", nameJp: "フェルン", role: "Mage Apprentice",
     quote: "I will become stronger. Not just for others — but for myself.",
-    image: "/fern-official.webp",
-    accentColor: "#7a6faa",
+    image: "/fern-official.webp", accentColor: "#7a6faa",
     traits: ["Rapid Caster", "Heiter's Ward", "First-Class Candidate", "Thousand-Shot Proficiency"],
     stats: [
-      { label: "Species", value: "Human" },
-      { label: "Class",   value: "Mage" },
-      { label: "Rank",    value: "First-Class Candidate" },
-      { label: "Mentor",  value: "Heiter → Frieren" },
+      { label: "Species", value: "Human" }, { label: "Class", value: "Mage" },
+      { label: "Rank", value: "First-Class Candidate" }, { label: "Mentor", value: "Heiter → Frieren" },
     ],
     bio: [
       "Fern is an orphan taken in by the aging priest Heiter, who recognized her extraordinary mana capacity and arranged for Frieren to train her. What followed was years of relentless, quiet refinement.",
@@ -25,18 +20,13 @@ const CHARACTERS = [
     ],
   },
   {
-    name: "Stark",
-    nameJp: "シュタルク",
-    role: "Warrior",
+    name: "Stark", nameJp: "シュタルク", role: "Warrior",
     quote: "I move before I get too scared to move at all.",
-    image: "/stark-official.webp",
-    accentColor: "#c05c3a",
+    image: "/stark-official.webp", accentColor: "#c05c3a",
     traits: ["Eisen's Protege", "Overwhelming Power", "Cowardly but Brave", "Reliable Shield"],
     stats: [
-      { label: "Species",   value: "Human" },
-      { label: "Class",     value: "Warrior" },
-      { label: "Mentor",    value: "Eisen the Eisenfresser" },
-      { label: "Specialty", value: "Combat Instinct" },
+      { label: "Species", value: "Human" }, { label: "Class", value: "Warrior" },
+      { label: "Mentor", value: "Eisen the Eisenfresser" }, { label: "Specialty", value: "Combat Instinct" },
     ],
     bio: [
       "Stark is the apprentice of Eisen, one of the heroes who fought alongside Frieren. Despite his immense combat ability — enough to fell giants single-handedly — he privately considers himself a coward.",
@@ -45,23 +35,63 @@ const CHARACTERS = [
     ],
   },
   {
-    name: "Himmel",
-    nameJp: "ヒンメル",
-    role: "The Hero",
+    name: "Himmel", nameJp: "ヒンメル", role: "The Hero",
     quote: "Even if you forget me someday, I still want you to know — I am glad I got to meet you.",
-    image: "/himmel-official.webp",
-    accentColor: "#b8902a",
+    image: "/himmel-official.webp", accentColor: "#b8902a",
     traits: ["Demon King Slayer", "Leader of Heroes", "Frieren's Catalyst", "Eternal Legacy"],
     stats: [
-      { label: "Species", value: "Human" },
-      { label: "Class",   value: "Hero" },
-      { label: "Status",  value: "Deceased" },
-      { label: "Legacy",  value: "Eternal" },
+      { label: "Species", value: "Human" }, { label: "Class", value: "Hero" },
+      { label: "Status", value: "Deceased" }, { label: "Legacy", value: "Eternal" },
     ],
     bio: [
       "Himmel the Hero led the legendary party that defeated the Demon King. He was charismatic, idealistic, and insufferably vain about his own appearance — but underneath all of that was a man of genuine, boundless heart.",
       "His death at the beginning of the story is the catalyst for everything. Frieren, who barely registered their decade together, is shattered by grief she didn't know she was capable of. That grief becomes her reason to journey.",
       "He appears throughout the story in flashbacks — laughing, posturing, gently teasing Frieren. Each memory reveals more of who he was: someone who chose kindness deliberately, who built statues not for glory but so strangers would have something to look at.",
+    ],
+  },
+  {
+    name: "Heiter", nameJp: "ハイター", role: "Priest",
+    quote: "Fern will become a wonderful mage. I am certain of it.",
+    image: "/heiter-official.webp", accentColor: "#35877b",
+    traits: ["Holy Magic", "Fern's Guardian", "Party Healer", "Aging Grace"],
+    stats: [
+      { label: "Species", value: "Human" }, { label: "Class", value: "Priest" },
+      { label: "Status", value: "Deceased" }, { label: "Ward", value: "Fern" },
+    ],
+    bio: [
+      "Heiter was the priest of Himmel's legendary hero party — the one who drank too much, complained often, and quietly held everything together when it mattered most.",
+      "In his final years, knowing his time was short, he adopted the orphan Fern and arranged for Frieren to take her as an apprentice. It was his last great act: engineering a future he wouldn't live to see.",
+      "Despite his irreverent exterior, Heiter was driven by a deep faith — not just in his god, but in people. His belief in Fern's potential was absolute, and she carries that belief forward in everything she does.",
+    ],
+  },
+  {
+    name: "Eisen", nameJp: "アイゼン", role: "Dwarf Warrior",
+    quote: "Strength alone isn't enough. You must protect the ones beside you.",
+    image: "/eisen-official.webp", accentColor: "#7a6055",
+    traits: ["Dwarf Elder", "Iron Constitution", "Stark's Mentor", "Hero Party Veteran"],
+    stats: [
+      { label: "Species", value: "Dwarf" }, { label: "Class", value: "Warrior" },
+      { label: "Age", value: "Centuries Old" }, { label: "Protege", value: "Stark" },
+    ],
+    bio: [
+      "Eisen was the warrior of Himmel's party — a dwarf of immense strength and even greater patience. Where others burned bright, he endured. Where others rushed, he held his ground.",
+      "He trained Stark from childhood, instilling not just combat skill but a philosophy: that the purpose of strength is to shield others, not to dominate them.",
+      "Now aged even by dwarven standards, Eisen watches the new generation carry forward what his party began. There is pride in that, and something quieter — the satisfaction of a life well spent.",
+    ],
+  },
+  {
+    name: "Ubel", nameJp: "ユーベル", role: "Mage Candidate",
+    quote: "I just do what feels natural. Is that so strange?",
+    image: "/ubel-official.webp", accentColor: "#a06080",
+    traits: ["Instinct-Type Mage", "Imagination Magic", "Unpredictable", "First-Class Candidate"],
+    stats: [
+      { label: "Species", value: "Human" }, { label: "Class", value: "Mage" },
+      { label: "Rank", value: "First-Class Candidate" }, { label: "Style", value: "Instinct-Based" },
+    ],
+    bio: [
+      "Ubel is a mage candidate who fights entirely on instinct and imagination. Where others study spells methodically, she simply envisions what she wants and makes it happen — a terrifying and rare gift.",
+      "Her magic works by fully imagining the effect of a spell — the sensation of cutting, the feeling of destruction. This requires a mindset that unsettles most people, but to Ubel it is simply natural.",
+      "Despite her unnerving presence, Ubel is not cruel. She is honest to a fault, direct in ways that disarm, and strangely loyal to those she respects. Her strangeness is not malice — it is simply how she sees the world.",
     ],
   },
 ];
@@ -70,9 +100,22 @@ export default function CharacterCarousel() {
   const [active,     setActive]     = useState(0);
   const [modalChar,  setModalChar]  = useState<typeof CHARACTERS[0] | null>(null);
   const [transitioning, setTransitioning] = useState(false);
+  const [inView,     setInView]     = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
   const nextRef   = useRef<number | null>(null);
   const touchStart = useRef<number | null>(null);
   const autoTimer  = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // Pause auto-advance when section is scrolled out of view
+  useEffect(() => {
+    const el = sectionRef.current; if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   const go = useCallback((rawNext: number) => {
     if (transitioning) return;
@@ -95,14 +138,14 @@ export default function CharacterCarousel() {
   }, [active, go, modalChar]);
 
   useEffect(() => {
-    // Pause auto-advance while modal is open
-    if (modalChar) {
+    // Pause when modal is open OR when section is out of view
+    if (modalChar || !inView) {
       if (autoTimer.current) clearInterval(autoTimer.current);
       return;
     }
     autoTimer.current = setInterval(() => go(active + 1), 7000);
     return () => { if (autoTimer.current) clearInterval(autoTimer.current); };
-  }, [active, go, modalChar]);
+  }, [active, go, modalChar, inView]);
 
   const handleGo = useCallback((n: number) => {
     resetAuto();
@@ -123,7 +166,7 @@ export default function CharacterCarousel() {
     <>
       <CharacterModal char={modalChar} onClose={() => setModalChar(null)} />
 
-      <section style={{
+      <section ref={sectionRef} style={{
         padding: "80px 24px 100px",
         background: "linear-gradient(180deg, #f8f4ef 0%, #f2ece4 100%)",
         position: "relative", overflow: "hidden",
