@@ -1,12 +1,12 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-function Particles() {
+function Particles({ count }: { count: number }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const c = ref.current; if (!c) return;
-    for (let i = 0; i < 45; i++) {
+    for (let i = 0; i < count; i++) {
       const p = document.createElement("div");
       p.className = "particle";
       const sz = Math.random() * 3 + 1;
@@ -17,34 +17,46 @@ function Particles() {
       c.appendChild(p);
     }
     return () => { while (c.firstChild) c.removeChild(c.firstChild); };
-  }, []);
+  }, [count]);
   return <div ref={ref} className="absolute inset-0 overflow-hidden pointer-events-none" />;
 }
 
 export default function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.matchMedia("(pointer: coarse)").matches);
+  }, []);
+
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y    = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
-  const opac = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  // On mobile: no parallax (y stays 0), no fade-out on scroll
+  const y    = useTransform(scrollYProgress, [0, 1], isMobile ? ["0%", "0%"] : ["0%", "25%"]);
+  const opac = useTransform(scrollYProgress, [0, 0.6], isMobile ? [1, 1] : [1, 0]);
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Light cream background */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#f8f4ef] via-[#f3ede4] to-[#ede7dd]" />
 
-      {/* Subtle radials */}
+      {/* Radials */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,rgba(74,173,160,0.08),transparent)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_35%_30%_at_65%_35%,rgba(184,144,42,0.06),transparent)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_30%_30%_at_30%_65%,rgba(200,192,208,0.1),transparent)]" />
 
-      {/* Spinning rings — light tone */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full border border-[#4aada0]/10 animate-spin-slow pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[780px] h-[780px] rounded-full border border-[#c8c0d0]/12 animate-spin-slow-r pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] rounded-full border border-[#b8902a]/8 animate-spin-slow pointer-events-none" />
+      {/* Spinning rings — hidden on mobile to avoid stutter */}
+      {!isMobile && (
+        <>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full border border-[#4aada0]/10 animate-spin-slow pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[780px] h-[780px] rounded-full border border-[#c8c0d0]/12 animate-spin-slow-r pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] rounded-full border border-[#b8902a]/8 animate-spin-slow pointer-events-none" />
+        </>
+      )}
 
-      <Particles />
+      {/* Fewer particles on mobile */}
+      <Particles count={isMobile ? 12 : 45} />
 
-      {/* Content */}
+      {/* Content — no parallax transform on mobile */}
       <motion.div style={{ y, opacity: opac }} className="relative z-10 text-center px-6 max-w-4xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, letterSpacing: "1.5em" }}
@@ -95,7 +107,8 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.8 }}
-          className="mt-36 flex flex-col sm:flex-row gap-5 justify-center items-center"
+          style={{ marginTop: "5rem" }}
+          className="flex flex-col sm:flex-row gap-5 justify-center items-center"
         >
           <a href="#frieren" style={{
               fontFamily: "var(--font-lato, sans-serif)",
