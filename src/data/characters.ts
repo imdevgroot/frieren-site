@@ -273,6 +273,39 @@ export const CHARACTERS: Character[] = [
 
 export const EXTENDED_CHARACTERS = [
   {
+    slug: "flamme",
+    name: "Flamme",
+    nameJp: "フランメ",
+    role: "Ancient Mage · Frieren's Master",
+    accentColor: "#c09050",
+    metaDescription: "Flamme was Frieren's master and one of the greatest mages in history. Her strategic genius and mana concealment technique changed the course of the war against the Demon King.",
+    bio: [
+      "Flamme was an ancient human mage who served as Frieren's master — the person who shaped how Frieren understands magic, humans, and the long moral weight of living across centuries. In her own era, she was considered the greatest human mage alive, and the historical record of the war against the Demon King is inseparable from her decisions.",
+      "Her most consequential contribution was the development and propagation of mana concealment. By teaching human mages to suppress their mana signatures, Flamme denied demons the ability to hunt down magical talent before it could develop. Over generations, this single technique shifted the military balance in ways that made the Hero Party's eventual campaign possible.",
+      "Flamme understood something that most powerful mages do not: that the strategic application of ability matters more than its raw scale. She instructed Frieren to hide her true power — not from cowardice but from the recognition that an elf who appears ordinary is an asset that an elf who appears extraordinary is not. That advice echoes through every encounter in the series.",
+      "In flashback, Flamme appears warm, precise, and genuinely fond of Frieren — though she expresses it in ways the young elf could not fully decode at the time. Her lessons were never just about magic. They were about how to survive being powerful in a world that would destroy what it could not control.",
+    ],
+    abilities: [
+      { name: "Mana Concealment (Originator)", description: "Flamme developed the foundational concealment technique that became the cornerstone of human magical strategy against demons. Teaching it broadly was a strategic decision that changed the entire war." },
+      { name: "Advanced Combat Magic", description: "Flamme was considered the greatest human mage of her era — her combat capability was the benchmark against which others were measured." },
+      { name: "Pedagogical Mastery", description: "Flamme's greatest ability may have been teaching — specifically, the ability to identify what a student needed to learn and deliver it in a form they could absorb. Frieren is her proof." },
+    ],
+    relationships: [
+      { name: "Frieren", description: "Her apprentice, and her most lasting contribution to the world. Flamme shaped Frieren's approach to magic, to humans, and to the question of what power is for." },
+      { name: "Serie", description: "Flamme was Serie's apprentice — which inverts the apparent hierarchy and explains how Flamme's techniques carry the depth they do." },
+    ],
+    quotes: [
+      "\"Hide your power. Not because you are ashamed of it — because the world is not ready to know what you are.\"",
+      "\"Magic is not about what you can do. It is about what you choose to do with what you can do.\"",
+      "\"You will outlive everyone who teaches you anything. Make sure what they taught you was worth keeping.\"",
+    ],
+    keyMoments: [
+      { title: "Teaching Mana Concealment", description: "Flamme passes the concealment technique to Frieren — and through her, eventually to the entire human magical tradition." },
+      { title: "Advising Frieren to Hide Her Power", description: "The advice that defines Frieren's behavior across a millennium. Flamme understood the strategic and social calculus of extraordinary ability." },
+      { title: "Her Death", description: "Flamme was human. She died as humans do. The fact that Frieren was present for it and did not fully register what was being lost until later is a quiet tragedy the series returns to." },
+    ],
+  },
+  {
     slug: "serie",
     name: "Serie",
     nameJp: "ゼーリエ",
@@ -384,6 +417,149 @@ export const EXTENDED_CHARACTERS = [
     ],
     keyMoments: [
       { title: "The Failed Dominance", description: "The moment Aura attempts to activate Scales of Obedience against Frieren — and it simply does not work. The scene is the series' clearest demonstration of Frieren's actual power." },
+    ],
+  },
+  {
+    slug: "sense",
+    name: "Sense",
+    nameJp: "センス",
+    role: "First-Class Mage · Exam Proctor",
+    accentColor: "#709060",
+    metaDescription: "Sense is the proctor of the Northern Magic Association's first-class mage exam. Her barrier defines the upper limit of what candidates must overcome to earn certification.",
+    bio: [
+      "Sense is a sitting first-class mage of the Northern Magic Association who serves as the proctor for the certification exam. Her specific role is to be the final obstacle: candidates who cannot pierce her barrier do not pass, regardless of how well they performed in the earlier stages.",
+      "The design of her test reflects a philosophy about what first-class certification should mean. A mage who cannot breach Sense's barrier is not a first-class mage, by her standard — and her standard is the one that matters. She calibrates the barrier to the upper edge of first-class capability, which means passing requires genuine ability, not exam-specific preparation.",
+      "Sense is methodical and unhurried in her assessment of candidates. She has seen enough exams to recognize ability quickly and has no interest in dramatizing the test. When Ubel's conceptual cutting magic breaches her barrier, her reaction is notable precisely because it is measured — the restraint of someone who understands what she has just witnessed.",
+    ],
+    abilities: [
+      { name: "Sense's Barrier", description: "The definitive test of the exam. Designed to resist candidates who lack genuine first-class ability. Multiple layered constructs that require penetrating the specific type of force or concept that each layer resists." },
+      { name: "Assessment Magic", description: "Sense can read and evaluate magical ability with precision — a necessary skill for an exam proctor whose judgment determines who advances." },
+    ],
+    relationships: [
+      { name: "Exam Candidates", description: "Sense maintains professional distance from candidates during the exam, which makes her rare moments of visible reaction — when Ubel breaches her barrier, for instance — significantly more meaningful." },
+    ],
+    quotes: [
+      "\"The barrier is not a challenge to be solved. It is a question about what kind of mage you are.\"",
+      "\"I have proctored many exams. I have not often been surprised.\"",
+    ],
+    keyMoments: [
+      { title: "Setting the Barrier", description: "Sense constructs the second-test barrier — an act that establishes the exam's actual upper limit and makes clear to the candidates what they are genuinely dealing with." },
+      { title: "Ubel's Breach", description: "The moment Ubel's cutting magic penetrates Sense's barrier. One of the exam's most revealing scenes — Sense's response tells the audience more than any explanation could." },
+    ],
+  },
+  {
+    slug: "lugner",
+    name: "Lügner",
+    nameJp: "リュグナー",
+    role: "Demon · Deception Mage",
+    accentColor: "#804060",
+    metaDescription: "Lügner is a demon mage who specializes in deceptive magic designed to counter human detection and strategy. He fights Fern during a dangerous encounter in the north.",
+    bio: [
+      "Lügner is a demon mage whose ability centers on deception — specifically, on generating false mana signatures and misleading the detection magic that human mages rely on for situational awareness. His magic is not about overpowering opponents through raw force. It is about making opponents uncertain about what they are seeing, buying time, and exploiting the moment of hesitation.",
+      "His design as an opponent reflects something the series establishes clearly about demons: they are intelligent, strategic beings who study their enemies. Lügner's magic was developed in response to human mage capabilities — it is specifically calibrated to counteract the detection-based tactical awareness that makes human mages effective.",
+      "His encounter with Fern is one of the exam arc's most revealing combat sequences. Fern has to navigate an opponent whose primary weapon is informational rather than physical — a different kind of challenge than she has faced, against a demon who understands what she has been trained to do.",
+    ],
+    abilities: [
+      { name: "False Mana Generation", description: "Lügner can generate convincing false mana signatures that mislead detection magic. The ability makes it difficult for opponents to accurately assess where he is, what he is casting, and when." },
+      { name: "Misdirection Magic", description: "A broader suite of deceptive techniques that exploit the gap between what opponents' detection magic registers and what is actually happening." },
+    ],
+    relationships: [
+      { name: "Linie", description: "His partner. Their combat styles are complementary — Lügner's deception creates openings that Linie's physical ability exploits." },
+      { name: "Fern", description: "His primary opponent. Fern's exceptional detection ability and casting speed made her a more difficult target than he expected." },
+    ],
+    quotes: [
+      "\"A mage who cannot trust what their senses tell them is not a mage. They are a liability.\"",
+      "\"I did not underestimate you. I simply overestimated how long my advantage would hold.\"",
+    ],
+    keyMoments: [
+      { title: "The Ambush", description: "Lügner and Linie separate the party — a deliberate strategy designed to prevent Frieren from intervening." },
+      { title: "The Fight with Fern", description: "Lügner's deception magic against Fern's detection ability — a contest that reveals how much Fern's training has genuinely prepared her for unexpected opponents." },
+    ],
+  },
+  {
+    slug: "linie",
+    name: "Linie",
+    nameJp: "リニエ",
+    role: "Demon · Physical Combat Specialist",
+    accentColor: "#905050",
+    metaDescription: "Linie is a demon combat specialist who partners with Lügner. Her physical combat ability and aggressive style make her a dangerous opponent for Stark.",
+    bio: [
+      "Linie is Lügner's partner — a demon who specializes in physical combat rather than magic. Where Lügner's ability operates on the informational level, exploiting what opponents cannot accurately perceive, Linie operates on the physical level, exploiting the openings that Lügner's deception creates.",
+      "Her combat style is aggressive and direct — a contrast to Lügner's indirection that makes the pair difficult to counter simultaneously. Opponents who adjust to Lügner's misdirection expose themselves to Linie's attacks; opponents who focus on Linie's physical threat lose the situational awareness Lügner's magic is designed to compromise.",
+      "Her encounter with Stark is a physical confrontation between two combatants who are, by their respective standards, genuinely powerful. The fight tests Stark in ways the journey north has not previously required — an opponent who is specifically a physical threat rather than a magical one, at a level that demands he use everything his training has built.",
+    ],
+    abilities: [
+      { name: "Enhanced Physical Combat", description: "Linie's physical combat ability is at the level of a demon general's lieutenant — strength, speed, and durability that exceed human peak." },
+      { name: "Coordinated Tactics with Lügner", description: "Linie and Lügner fight as a deliberate unit. Their complementary styles are most effective when opponents are managing both simultaneously." },
+    ],
+    relationships: [
+      { name: "Lügner", description: "Her partner. Their combat effectiveness depends on operating as a coordinated pair rather than two individuals." },
+      { name: "Stark", description: "Her primary opponent — a fight that measures both of them accurately." },
+    ],
+    quotes: [
+      "\"Your partner is managing the mage. You have only me to worry about.\"",
+    ],
+    keyMoments: [
+      { title: "Separating from Lügner", description: "Linie splits from Lügner to engage Stark directly — executing the strategy of dividing the party." },
+      { title: "The Fight with Stark", description: "A physical confrontation that requires Stark to demonstrate the full extent of his development as a warrior." },
+    ],
+  },
+  {
+    slug: "wirbel",
+    name: "Wirbel",
+    nameJp: "ヴィルベル",
+    role: "First-Class Mage Candidate · Northern Magic Association",
+    accentColor: "#507080",
+    metaDescription: "Wirbel is a first-class mage candidate with a morally complex background. His combat magic is effective and his methods are willing to go further than most candidates would consider.",
+    bio: [
+      "Wirbel is a mage candidate participating in the first-class exam alongside Fern, Ubel, and the others. He is effective, experienced, and operates with a pragmatism about the use of magic in combat that puts him morally to one side of most of his cohort. He is not a villain — he is a person whose history has taught him specific lessons about what magic is for.",
+      "His combat style prioritizes efficiency and outcome over method. He will use restraint magic, leverage, and coercive approaches without the hesitation that limits less experienced or less morally complicated mages. This makes him dangerous to encounter in the exam's adversarial phases — he does not telegraph his intentions, and he does not leave things half-done.",
+      "What distinguishes Wirbel from simply being a ruthless opponent is the specificity of his backstory. He has reasons for his methods that make them comprehensible, even if they are not always comfortable. The series treats him as a genuine character rather than an obstacle — someone whose approach to magic reflects a real history.",
+    ],
+    abilities: [
+      { name: "Restraint Magic", description: "Wirbel's primary combat application. Spells that immobilize, bind, and control opponents — allowing him to neutralize threats without necessarily destroying them." },
+      { name: "Combat Efficiency", description: "Wirbel does not waste magic or time. His tactical approach minimizes exposure and maximizes outcome with minimal resource expenditure." },
+    ],
+    relationships: [
+      { name: "Methode", description: "His exam partner. They operate effectively together, though their dynamic has a specific edge that reflects Wirbel's particular approach to working with others." },
+      { name: "Fern", description: "An encounter during the exam that tests both of them and reveals something about the limits of Wirbel's usual approach when facing a mage of genuine high ability." },
+    ],
+    quotes: [
+      "\"I do not enjoy this. I am simply willing to do what is necessary.\"",
+      "\"Clean outcomes require difficult choices. Most mages understand one of those things.\"",
+    ],
+    keyMoments: [
+      { title: "Exam Combat Approach", description: "Wirbel's methods during the survival phase of the exam reveal his particular tactical philosophy — effective, efficient, and willing to go further than most candidates." },
+      { title: "Encounter with Higher-Level Mages", description: "The moment Wirbel's pragmatic approach encounters its limits — a scene that humanizes him without excusing him." },
+    ],
+  },
+  {
+    slug: "granat",
+    name: "Granat",
+    nameJp: "グラナト",
+    role: "Lord of Äußerst · Northern Fortress Commander",
+    accentColor: "#806040",
+    metaDescription: "Granat is the lord of the northern fortress city of Äußerst and a veteran of the war against the Demon King. His history with Eisen and his ongoing duty to the north make him a complex figure.",
+    bio: [
+      "Granat is the lord of Äußerst, the northern fortress city that serves as a waypoint on the road to Aureole. He is a veteran — a man who survived the war against the Demon King's forces through decades of holding the line in the north when holding the line was all that remained.",
+      "His connection to Eisen goes back to that period. The two men share a history that the current story reveals carefully — a weight between them that has not been fully resolved and that Granat has carried for years in the specific silence of someone who does not know if the debt he owes has been noticed.",
+      "Granat's arc in the series is about the aftermath of war — what the people who were not heroes became after the heroism was over. He has led a fortress city through the long quiet of the post-war period, maintaining a defensive position against threats that no longer come at the scale they once did, wondering what he has been keeping watch for and whether it will matter.",
+    ],
+    abilities: [
+      { name: "Military Command", description: "Granat's ability is organizational and strategic — the capacity to maintain a fortress city in operational readiness over decades, managing personnel, defenses, and the morale of people guarding against a threat that has diminished but not ended." },
+      { name: "Combat Experience", description: "A veteran of the war against the Demon King, Granat's personal combat capability is real, though it is not the center of who he is in the current story." },
+    ],
+    relationships: [
+      { name: "Eisen", description: "A history that both men carry differently. The meeting between them when Frieren's party passes through Äußerst is one of the northern arc's most emotionally weighted scenes." },
+      { name: "Frieren", description: "Granat recognizes who Frieren is — what she was part of. His deference is not ceremonial." },
+    ],
+    quotes: [
+      "\"We held the line because someone had to. I never expected gratitude. I did expect to be remembered.\"",
+      "\"After the war, we became the people who stayed. Someone had to stay.\"",
+    ],
+    keyMoments: [
+      { title: "Frieren's Party at Äußerst", description: "The party's arrival at the fortress city and Granat's recognition of who they are — a scene that contextualizes the scale of the Hero Party's legacy in the north." },
+      { title: "The Meeting with Eisen's Legacy", description: "Granat confronting the weight of his history with Eisen — not through dramatic revelation but through the accumulation of small, specific details that carry real emotional mass." },
     ],
   },
   {
