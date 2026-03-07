@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CHARACTERS } from "@/data/characters";
+import { CHARACTERS, EXTENDED_CHARACTERS } from "@/data/characters";
 
 export const metadata: Metadata = {
   title: "Characters — Frieren: Beyond Journey's End",
@@ -28,7 +28,9 @@ export default function CharactersIndexPage() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 900, margin: "0 auto", padding: "60px 32px 80px" }}>
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "60px 32px 40px" }}>
+        <h2 style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 900, fontSize: "1.2rem", color: "#1e2030", marginBottom: 8 }}>Main Cast</h2>
+        <div style={{ width: 32, height: 2, background: "#4aada0", marginBottom: 32 }} />
         {CHARACTERS.map((char) => (
           <Link key={char.slug} href={`/characters/${char.slug}`} style={{ textDecoration: "none" }}>
             <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: 32, padding: "32px 0", borderBottom: "1px solid rgba(0,0,0,0.07)", alignItems: "center", cursor: "pointer" }}>
@@ -41,6 +43,22 @@ export default function CharactersIndexPage() {
                 <p style={{ fontSize: 13, color: "#7a7590", marginBottom: 14, letterSpacing: "0.05em" }}>{char.role}</p>
                 <p style={{ fontSize: 15, lineHeight: 1.75, color: "#3a3d52" }}>{char.bio[0].slice(0, 180)}...</p>
                 <p style={{ marginTop: 16, fontSize: 12, color: char.accentColor, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>Read profile →</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+
+        <h2 style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 900, fontSize: "1.2rem", color: "#1e2030", marginTop: 64, marginBottom: 8 }}>Supporting Cast</h2>
+        <div style={{ width: 32, height: 2, background: "#7a6faa", marginBottom: 32 }} />
+        {EXTENDED_CHARACTERS.map((char) => (
+          <Link key={char.slug} href={`/characters/${char.slug}`} style={{ textDecoration: "none" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 16, padding: "24px 0", borderBottom: "1px solid rgba(0,0,0,0.07)", cursor: "pointer" }}>
+              <div>
+                <p style={{ fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: char.accentColor, marginBottom: 4, fontWeight: 700 }}>{char.nameJp}</p>
+                <h2 style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 900, fontSize: "1.2rem", color: "#1e2030", marginBottom: 4 }}>{char.name}</h2>
+                <p style={{ fontSize: 12, color: "#7a7590", marginBottom: 10, letterSpacing: "0.05em" }}>{char.role}</p>
+                <p style={{ fontSize: 14, lineHeight: 1.75, color: "#3a3d52" }}>{char.bio[0].slice(0, 160)}...</p>
+                <p style={{ marginTop: 12, fontSize: 11, color: char.accentColor, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>Read profile →</p>
               </div>
             </div>
           </Link>

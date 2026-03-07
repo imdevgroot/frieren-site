@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel_Decorative, Lato } from "next/font/google";
 import "./globals.css";
+import Cursor from "@/components/Cursor";
 
 const cinzel = Cinzel_Decorative({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cinzel.variable} ${lato.variable}`}>
       <body>
+        <Cursor />
         {children}
         {/* Fix scroll: no hash in URL, always top on fresh load */}
         <script dangerouslySetInnerHTML={{ __html: `

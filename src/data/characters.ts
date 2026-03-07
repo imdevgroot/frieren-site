@@ -271,6 +271,204 @@ export const CHARACTERS: Character[] = [
   },
 ];
 
+export const EXTENDED_CHARACTERS = [
+  {
+    slug: "serie",
+    name: "Serie",
+    nameJp: "ゼーリエ",
+    role: "Supreme Mage · Greatest Living Mage",
+    accentColor: "#8a70c0",
+    metaDescription: "Serie is the greatest living mage and one of the most powerful elves alive. She grants wishes to any mage who can copy her spells — none have succeeded.",
+    bio: [
+      "Serie is the supreme mage of the Continental Magic Association and, by most accounts, the most powerful mage alive. An ancient elf like Frieren, she has spent centuries accumulating knowledge and refining her craft beyond what most mages can comprehend.",
+      "Her policy is simple and devastating: any mage who can successfully copy one of her spells will receive a single wish granted. In living memory, no one has succeeded. This is not a formality — it is a genuine invitation she has no expectation of ever needing to honor.",
+      "Serie's attitude toward most mages is a calibrated indifference that borders on contempt. She recognizes effort and talent intellectually but does not invest in either. There is only one mage she regards as a peer: Frieren. This recognition, coming from Serie, carries extraordinary weight.",
+    ],
+    abilities: [
+      { name: "Spell Copying", description: "Serie's spells cannot be replicated by any mage currently alive. The specifics of her arsenal are never fully enumerated — which is itself a statement." },
+      { name: "Wish Granting", description: "The nature and mechanism of Serie's wish-granting ability is left undefined. That she can do it is treated as fact." },
+    ],
+    relationships: [
+      { name: "Frieren", description: "The only mage Serie considers her equal. She acknowledges this without warmth, which from Serie constitutes profound respect." },
+      { name: "Flamme", description: "Flamme was Serie's apprentice — which means the greatest mage of Flamme's era was trained by Serie. The chain of lineage matters." },
+    ],
+    quotes: [
+      "\"You are the first mage in a very long time who has made me feel anything resembling interest.\"",
+      "\"A wish for any mage who can copy my magic. The offer stands. It has always stood.\"",
+    ],
+    keyMoments: [
+      { title: "The Wish Offer", description: "Serie introduces herself to exam candidates by explaining the standing offer — and making clear, without saying so, that she does not expect to be taken up on it." },
+      { title: "Acknowledging Frieren", description: "Serie's quiet recognition of Frieren's scale — a scene that recontextualizes how extraordinary Frieren actually is." },
+    ],
+  },
+  {
+    slug: "denken",
+    name: "Denken",
+    nameJp: "デンケン",
+    role: "First-Class Mage · Northern Magic Association",
+    accentColor: "#6070a0",
+    metaDescription: "Denken is an elderly first-class mage with decades of experience and formidable combat ability. He participates in the First-Class Mage Exam alongside Frieren.",
+    bio: [
+      "Denken is one of the Northern Magic Association's sitting first-class mages — an elderly man with decades of accumulated experience and a combat record that most younger mages cannot match. He is an exam participant in the same cohort as Frieren, which initially seems absurd until his abilities become apparent.",
+      "His specialty is life magic — an area of practice that directly counteracts the decay of the body, granting him a physical capability well beyond what his age would suggest. He moves like a man in his prime because, in the ways that matter for combat, he is.",
+      "Denken has a mentor's bearing — deliberate, measured, and possessed of the specific patience that only comes from having been in enough dangerous situations to know which ones require urgency. He is formidable, knowledgeable, and one of the few exam participants who immediately understands what Frieren's presence means for everyone else's chances.",
+    ],
+    abilities: [
+      { name: "Life Magic", description: "Denken's signature discipline. Life magic applied internally maintains physical peak condition despite age — extending combat capability indefinitely as long as the caster's mana holds." },
+      { name: "High-Level Offensive Magic", description: "Decades of first-class practice have given Denken an extensive and powerful offensive repertoire. His combat output rivals mages decades his junior." },
+    ],
+    relationships: [
+      { name: "Frieren", description: "One of the few participants who sized Frieren up immediately and correctly. His respect for her is genuine and unperformed." },
+      { name: "His Apprentices", description: "Denken participates in the exam with apprentices who fight alongside him. The loyalty between them reflects well on how he has conducted himself as a mentor." },
+    ],
+    quotes: [
+      "\"Power and wisdom together make a mage. Power alone makes a liability.\"",
+      "\"At my age, you learn to recognize the things you cannot fight. She is one of those things.\"",
+    ],
+    keyMoments: [
+      { title: "Exam Combat Performance", description: "Denken's performance in the survival test reveals that his age is no handicap — he is fully first-class caliber in every respect." },
+      { title: "Reading Frieren", description: "Denken is among the first to recognize that Frieren's mana signature is concealing something of an entirely different order of magnitude." },
+    ],
+  },
+  {
+    slug: "sein",
+    name: "Sein",
+    nameJp: "ザイン",
+    role: "Wandering Priest · Temporary Companion",
+    accentColor: "#6a8a70",
+    metaDescription: "Sein is a wandering priest who joins Frieren's party temporarily. His healing magic and reluctant heroism make him a memorable companion.",
+    bio: [
+      "Sein is a priest who grew up in a small town and never particularly intended to become an adventurer. He has healing magic, a natural talent for reading people, and a persistent wish to find a childhood friend who left town years ago — which is ultimately what puts him on the road.",
+      "He joins Frieren, Fern, and Stark for a portion of their journey north and proves a useful companion: his healing covers a gap in the party's capabilities, his interpersonal insight frequently catches things the others miss, and his ordinary human perspective offers a useful counterweight to Frieren's thousand-year frame of reference.",
+      "Sein is not a hero by temperament. He is sociable, occasionally lazy, and entirely capable of choosing the comfortable option over the courageous one. What makes him interesting is that he keeps choosing the harder thing anyway — not from some deep moral conviction but from a specific stubbornness he would rather attribute to bad luck.",
+    ],
+    abilities: [
+      { name: "Healing Magic", description: "Sein's primary magical discipline. His healing is strong enough to address serious wounds and fills a capability gap the party genuinely needed covered." },
+      { name: "Interpersonal Reading", description: "Not a magical ability but a real skill. Sein reads people — their motivations, their unspoken feelings, their self-deceptions — with an accuracy that repeatedly proves useful." },
+    ],
+    relationships: [
+      { name: "Frieren", description: "He treats Frieren as a person rather than a legend, which she quietly appreciates." },
+      { name: "Stark", description: "A natural camaraderie — two people who would rather admit fear than perform courage." },
+      { name: "Fern", description: "A friendship conducted entirely in mutual exasperation that is clearly genuine." },
+    ],
+    quotes: [
+      "\"There is someone I need to find. I keep telling myself that is the only reason I am still walking.\"",
+      "\"I am not brave. I just have poor timing for changing my mind.\"",
+    ],
+    keyMoments: [
+      { title: "Joining the Party", description: "Sein's entry into the story is accidental and immediately effective. He slides into the group dynamic as if he was always supposed to be there." },
+      { title: "Departing to Find His Friend", description: "When Sein eventually splits off to resume his original search, the farewell is understated and earned." },
+    ],
+  },
+  {
+    slug: "aura",
+    name: "Aura the Guillotine",
+    nameJp: "断頭台のアウラ",
+    role: "Demon · Former General of the Demon King",
+    accentColor: "#b04040",
+    metaDescription: "Aura the Guillotine was one of the Demon King's most powerful generals. Her blood manipulation magic and absolute dominance made her a feared opponent — until she met Frieren.",
+    bio: [
+      "Aura the Guillotine was one of the Demon King's generals — an ancient demon who held a significant swath of territory even after the Demon King's defeat. Her ability to control targets through their blood gave her a dominance over opponents that most could not overcome, and she had centuries of experience using it.",
+      "Her encounter with Frieren is one of the series' most important demonstrations of the gap between apparent and actual power. Aura initiates her blood dominance technique against Frieren — a technique that has never failed her — and encounters something she has no framework for: a mana output so vastly larger than her own that the technique cannot physically execute.",
+      "Aura is not characterized as a monster. She is intelligent, strategic, and has maintained power for centuries through real capability. Her defeat is not a comeuppance. It is simply the encounter between an extraordinary being and one that is, by a significant margin, more extraordinary.",
+    ],
+    abilities: [
+      { name: "Blood Manipulation — Scales of Obedience", description: "Aura's signature ability. By establishing dominance of mana, she gains control over a target's blood. The technique has never failed against any opponent she has faced — until Frieren." },
+      { name: "Army Command", description: "Aura maintained a substantial force of undead and demon soldiers in the post-war period, demonstrating organizational capacity beyond raw magical power." },
+    ],
+    relationships: [
+      { name: "Frieren", description: "The mage who ended her centuries of dominance — not through superior technique but through a scale of power Aura had never encountered and could not have prepared for." },
+    ],
+    quotes: [
+      "\"In all my centuries, I have never encountered a mana signature I could not dominate. Until now.\"",
+    ],
+    keyMoments: [
+      { title: "The Failed Dominance", description: "The moment Aura attempts to activate Scales of Obedience against Frieren — and it simply does not work. The scene is the series' clearest demonstration of Frieren's actual power." },
+    ],
+  },
+  {
+    slug: "land",
+    name: "Land",
+    nameJp: "ラント",
+    role: "First-Class Mage Candidate · Ubel's Exam Partner",
+    accentColor: "#5a8a6a",
+    metaDescription: "Land is a cautious, strategically-minded mage candidate who partners with Ubel during the First-Class Mage Exam. His temperament and her instincts make an unlikely but effective team.",
+    bio: [
+      "Land is a mage candidate who participates in the Northern Magic Association's first-class exam alongside Frieren, Fern, and the other candidates. He is cautious by nature, precise in his magical application, and deeply uncomfortable with Ubel — which does not stop him from partnering with her when the exam's structure makes it advantageous.",
+      "The partnership between Land and Ubel is one of the exam arc's most interesting dynamics. They are opposite types: Land plans; Ubel acts. Land worries; Ubel decides. The friction is constant and the results are, despite everything, excellent.",
+      "Land's magic is not flamboyant. It is careful, multi-layered, and built for sustained effectiveness over dramatic single strikes. He is not the most powerful mage in his cohort, but he may be among the most thoughtful — a quality the exam rewards more than most candidates expect.",
+    ],
+    abilities: [
+      { name: "Layered Defensive Magic", description: "Land's specialty is constructing defensive arrangements that account for multiple attack vectors simultaneously. The preparation takes time; the results are difficult to circumvent." },
+      { name: "Tactical Casting", description: "Land applies magic in sequences designed to create specific outcomes rather than simply maximizing immediate output — a strategic approach that consistently surprises opponents." },
+    ],
+    relationships: [
+      { name: "Ubel", description: "His exam partner and ongoing source of anxiety. Their collaboration works precisely because they supply each other's missing capabilities." },
+    ],
+    quotes: [
+      "\"Working with Ubel requires accepting that some situations will be resolved in ways I would never have approved in advance.\"",
+      "\"I prepare for outcomes. She creates them. Somehow the results are acceptable.\"",
+    ],
+    keyMoments: [
+      { title: "Agreeing to Partner with Ubel", description: "Land's decision to team with Ubel despite every reasonable reservation about her temperament — a choice that proves correct." },
+      { title: "Combined Exam Performance", description: "The moments where Land's preparation and Ubel's instincts lock together cleanly and produce outcomes neither could have achieved alone." },
+    ],
+  },
+  {
+    slug: "lawine",
+    name: "Lawine",
+    nameJp: "ラヴィーネ",
+    role: "First-Class Mage Candidate · Ice Mage",
+    accentColor: "#6090b0",
+    metaDescription: "Lawine is an ice mage and first-class mage candidate whose elemental magic pairs powerfully with her partner Kanne's water abilities.",
+    bio: [
+      "Lawine is an ice magic specialist who participates in the first-class mage exam. Her magical output is substantial, her precision is high, and her partnership with Kanne — whose water magic is the complementary half of her ice discipline — is the tactical core of their exam strategy.",
+      "She is competitive and somewhat prideful, which creates friction with Kanne despite their genuine effectiveness as a pair. The tension between them is not a weakness in their partnership so much as evidence that both of them care enough about the outcome to argue about how to reach it.",
+    ],
+    abilities: [
+      { name: "Ice Magic", description: "Lawine's primary discipline. High output, broad coverage, and naturally complementary with water magic — allowing combinations with Kanne that neither could execute alone." },
+    ],
+    relationships: [
+      { name: "Kanne", description: "Her partner and frequent target of mild exasperation. The complementary nature of their magic makes them more effective together than their friction would suggest." },
+      { name: "Fern", description: "A mutual recognition between two serious young mages." },
+    ],
+    quotes: [
+      "\"Ice stops what water cannot hold. We have different jobs.\"",
+    ],
+    keyMoments: [
+      { title: "Elemental Combination Attack", description: "Lawine and Kanne execute a combined technique that exploits the complementary nature of ice and water magic — a moment that demonstrates the value of their partnership over individual output." },
+    ],
+  },
+  {
+    slug: "kanne",
+    name: "Kanne",
+    nameJp: "カンネ",
+    role: "First-Class Mage Candidate · Water Mage",
+    accentColor: "#4080a0",
+    metaDescription: "Kanne is a water mage and first-class mage candidate who partners with Lawine during the exam. Her fluid magic and their tactical combination make them a formidable pair.",
+    bio: [
+      "Kanne is a water magic specialist and Lawine's exam partner. Where Lawine freezes and locks down, Kanne moves and shapes — their abilities are naturally complementary in ways that make their combined output significantly greater than either alone.",
+      "She is somewhat more measured than Lawine, which occasionally creates the impression that she is the patient one. The reality is more complicated: she has strong opinions about execution that she expresses through pointed disagreement with Lawine's approach. The arguments are genuine; the partnership is too.",
+    ],
+    abilities: [
+      { name: "Water Magic", description: "Kanne's primary discipline. Fluid, adaptive, and capable of both offensive and utility applications. Most effective in combination with Lawine's ice techniques." },
+    ],
+    relationships: [
+      { name: "Lawine", description: "Her partner and the person she argues with most consistently. The arguments are evidence of care; the results are evidence of genuine compatibility." },
+    ],
+    quotes: [
+      "\"Water finds the path. Ice holds it. We are more effective than you think.\"",
+    ],
+    keyMoments: [
+      { title: "The Combination Technique", description: "Kanne and Lawine's signature paired attack — a demonstration of what deliberate elemental synergy can achieve against opponents who cannot counter both simultaneously." },
+    ],
+  },
+];
+
 export function getCharacter(slug: string): Character | undefined {
   return CHARACTERS.find((c) => c.slug === slug);
+}
+
+export function getExtendedCharacter(slug: string) {
+  return EXTENDED_CHARACTERS.find((c) => c.slug === slug);
 }
