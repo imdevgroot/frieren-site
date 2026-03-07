@@ -1,5 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+
+const SLUGS: Record<string, string> = {
+  Frieren: "frieren", Fern: "fern", Stark: "stark", Himmel: "himmel",
+  Heiter: "heiter", Eisen: "eisen", Ubel: "ubel",
+};
 
 const CHARACTERS = [
   { malId: 188701, name: "Frieren",  role: "Elven Mage",         quote: "I just didn't understand humans at the time.", traits: ["Zoltraak Master","1000+ Years","Spell Collector"] },
@@ -73,15 +79,26 @@ function CharRow({ char, i }: { char: CharData; i: number }) {
       </div>
       {/* Name + role */}
       <div>
-        <h3 style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 700, fontSize: 16, color: "#1e2030", margin: 0 }}>{char.name}</h3>
+        {SLUGS[char.name] ? (
+          <Link href={`/characters/${SLUGS[char.name]}`} style={{ textDecoration: "none" }}>
+            <h3 style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 700, fontSize: 16, color: "#1e2030", margin: 0, transition: "color 0.2s" }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = accent; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = "#1e2030"; }}>
+              {char.name}
+            </h3>
+          </Link>
+        ) : (
+          <h3 style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 700, fontSize: 16, color: "#1e2030", margin: 0 }}>{char.name}</h3>
+        )}
         <p style={{ fontFamily: "var(--font-lato, sans-serif)", fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase", color: accent, marginTop: 4 }}>{char.role}</p>
       </div>
       {/* Quote */}
       <p className="char-row-quote" style={{ fontFamily: "var(--font-lato, sans-serif)", fontSize: 13, color: "rgba(58,61,82,0.7)", lineHeight: 1.7, fontStyle: "italic", margin: 0 }}>
         &ldquo;{char.quote}&rdquo;
       </p>
-      {/* Traits */}
-      <div className="char-row-traits" style={{ display: "flex", gap: 6, flexWrap: "wrap", justifyContent: "flex-end", maxWidth: 260 }}>
+      {/* Traits + profile link */}
+      <div className="char-row-traits" style={{ display: "flex", flexDirection: "column", gap: 8, alignItems: "flex-end", maxWidth: 260 }}>
+        <div style={{ display: "flex", gap: 6, flexWrap: "wrap", justifyContent: "flex-end" }}>
         {char.traits.map(t => (
           <span key={t} style={{
             fontFamily: "var(--font-lato, sans-serif)", fontSize: 10,
@@ -90,6 +107,15 @@ function CharRow({ char, i }: { char: CharData; i: number }) {
             background: `${accent}08`, letterSpacing: "0.02em",
           }}>{t}</span>
         ))}
+        </div>
+        {SLUGS[char.name] && (
+          <Link href={`/characters/${SLUGS[char.name]}`} style={{
+            fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase",
+            color: accent, textDecoration: "none", fontWeight: 700, opacity: 0.8,
+          }}>
+            Full Profile →
+          </Link>
+        )}
       </div>
     </div>
   );

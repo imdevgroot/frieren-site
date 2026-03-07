@@ -134,7 +134,7 @@ export default function HeroSection() {
           style={{ marginTop: "5rem" }}
           className="flex flex-col sm:flex-row gap-5 justify-center items-center"
         >
-          <a href="#frieren" style={{
+          <a href="/characters/frieren" style={{
               fontFamily: "var(--font-lato, sans-serif)",
               fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase",
               padding: "14px 36px", borderRadius: 100,
@@ -148,7 +148,7 @@ export default function HeroSection() {
           >
             Discover Frieren
           </a>
-          <a href="#arcs" style={{
+          <a href="/episodes" style={{
               fontFamily: "var(--font-lato, sans-serif)",
               fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase",
               padding: "14px 36px", borderRadius: 100,

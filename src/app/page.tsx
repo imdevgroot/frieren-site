@@ -83,6 +83,38 @@ const HIMMEL = {
   flip: false,
 };
 
+function ExploreHub() {
+  const hubs = [
+    { title: "Characters", desc: "Full profiles for every major character — abilities, lore, relationships, and key moments.", href: "/characters", accent: "#4aada0", icon: "✦" },
+    { title: "Magic & Spells", desc: "Every documented spell and technique, organized by type with battle context and user notes.", href: "/magic", accent: "#7a6faa", icon: "◈" },
+    { title: "Episode Guide", desc: "All 28 Season 1 episodes with summaries and key moments, grouped by arc.", href: "/episodes", accent: "#b8902a", icon: "◉" },
+    { title: "Lore", desc: "Deep-dive articles on the magic system, the Demon War, the mage exam, and Frieren's true power.", href: "/lore", accent: "#c05c3a", icon: "❧" },
+  ];
+
+  return (
+    <section style={{ padding: "80px 24px 100px", background: "#f0ebe3" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div style={{ textAlign: "center", marginBottom: 56 }}>
+          <p style={{ fontSize: 10, letterSpacing: "0.5em", textTransform: "uppercase", color: "#4aada0", marginBottom: 14, fontWeight: 700 }}>Explore</p>
+          <h2 style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 900, fontSize: "clamp(1.6rem, 4vw, 2.4rem)", color: "#1e2030", margin: 0 }}>The World of Frieren</h2>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 2 }}>
+          {hubs.map((h) => (
+            <a key={h.href} href={h.href} style={{ display: "block", padding: "36px 32px", background: "#f8f4ef", textDecoration: "none", borderTop: `3px solid ${h.accent}`, transition: "background 0.2s" }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#fff"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#f8f4ef"; }}>
+              <span style={{ fontSize: 24, display: "block", marginBottom: 16, color: h.accent }}>{h.icon}</span>
+              <h3 style={{ fontFamily: "var(--font-cinzel, serif)", fontWeight: 900, fontSize: 16, color: "#1e2030", marginBottom: 10 }}>{h.title}</h3>
+              <p style={{ fontSize: 13, lineHeight: 1.7, color: "#7a7590", marginBottom: 20 }}>{h.desc}</p>
+              <span style={{ fontSize: 11, color: h.accent, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>Explore →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -92,6 +124,7 @@ export default function Home() {
       <FrierenSpotlight />
       <CharacterCarousel />
       <CharactersSection />
+      <ExploreHub />
       <MagicSection />
       <ArcsTimeline />
       <QuotesSection />
