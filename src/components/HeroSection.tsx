@@ -58,14 +58,32 @@ export default function HeroSection() {
 
       {/* Content — no parallax transform on mobile */}
       <motion.div style={{ y, opacity: opac }} className="relative z-10 text-center px-6 max-w-4xl mx-auto w-full">
-        <motion.div
-          initial={{ opacity: 0, letterSpacing: isMobile ? "0.15em" : "1.5em" }}
-          animate={{ opacity: 1, letterSpacing: "0.4em" }}
-          transition={{ duration: isMobile ? 1.2 : 1.5, delay: 0.3, ease: "easeOut" }}
-          style={{ fontFamily: "sans-serif", fontSize: 10, color: "#4aada0", letterSpacing: "0.4em", textTransform: "uppercase", marginBottom: "2rem", display: "block", minHeight: 16 }}
-        >
-          Sousou no Frieren &nbsp;·&nbsp; 葬送のフリーレン
-        </motion.div>
+        {isMobile ? (
+          /* Mobile: two clean lines, simple fade */
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.0, delay: 0.3, ease: "easeOut" }}
+            style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, marginBottom: "2rem" }}
+          >
+            <span style={{ fontFamily: "sans-serif", fontSize: 10, color: "#4aada0", letterSpacing: "0.4em", textTransform: "uppercase" }}>
+              Sousou no Frieren
+            </span>
+            <span style={{ fontFamily: "sans-serif", fontSize: 10, color: "#4aada0", letterSpacing: "0.3em" }}>
+              葬送のフリーレン
+            </span>
+          </motion.div>
+        ) : (
+          /* Desktop: cinematic letterSpacing expansion */
+          <motion.div
+            initial={{ opacity: 0, letterSpacing: "1.5em" }}
+            animate={{ opacity: 1, letterSpacing: "0.4em" }}
+            transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+            style={{ fontFamily: "sans-serif", fontSize: 10, color: "#4aada0", letterSpacing: "0.4em", textTransform: "uppercase", marginBottom: "2rem", display: "block", minHeight: 16 }}
+          >
+            Sousou no Frieren &nbsp;·&nbsp; 葬送のフリーレン
+          </motion.div>
+        )}
 
         <motion.h1
           initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
